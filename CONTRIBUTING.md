@@ -8,7 +8,7 @@ When submitting code, please make every effort to follow existing conventions an
 
 By contributing your code, you agree to license your contribution under the terms of the (GNU GENERAL PUBLIC LICENSE link)
 
-All files are released with the Apache 2.0 license.
+All files are released with the GNU General Public License.
 
 If you are adding a new file it should have a header like this:
 
