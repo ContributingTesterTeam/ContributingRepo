@@ -233,7 +233,8 @@ Now you can send request to assistant and ask any question
 http://localhost:8080/${ENDPOINT_RELATIVE_PATH}
 ```
 
-#### Contributing
+Contributing
+-------
 For contribution guidelines, see [CONTRIBUTING](link).
 
 License
