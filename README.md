@@ -1,6 +1,6 @@
 # YDA Framework
 
-YDA Framework is a tool for quickly deploying assistants on large Java platforms, allowing them to use the platform's context to answer questions, effectively replacing managers.
+YDA Framework is a technology based on the principles of Retrieval-Augmented Generation (RAG), specifically designed for rapid creation and integration of artificial intelligence into web applications with minimal resource expenditure. Developed in Java, YDA provides a suite of built-in tools for processing large volumes of data, including functionalities for search, sorting, and data retrieval. These capabilities can be optionally disabled according to the user’s needs.
 
 ## What does this project do?
 
