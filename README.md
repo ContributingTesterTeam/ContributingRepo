@@ -54,28 +54,13 @@ repositories {
 
 dependencies {
     implementation "ai.yda:rag-starter:${ydaFrameworkVersion}"
-//    implementation "ai.yda:rag-streaming-starter:${ydaFrameworkVersion}"
     implementation "ai.yda:rag-assistant-starter:${ydaFrameworkVersion}"
-//    implementation "ai.yda:rag-streaming-assistant-starter:${ydaFrameworkVersion}"
-
-//  Channel
     implementation "ai.yda:rest-spring-channel:${ydaFrameworkVersion}"
-//    implementation "ai.yda:rest-spring-streaming-channel:${ydaFrameworkVersion}"
-
-//  Generator
     implementation "ai.yda:openai-assistant-generator-starter:${ydaFrameworkVersion}" // sse
-//    implementation "ai.yda:openai-assistant-streaming-generator-starter:${ydaFrameworkVersion}" // sse
-
-//  Retrievers
     implementation "ai.yda:website-retriever-starter:${ydaFrameworkVersion}"
-
-// Spring
     implementation 'org.springframework.boot:spring-boot-starter'
-
-//  Lombok
     compileOnly "org.projectlombok:lombok:1.18.30"
     annotationProcessor "org.projectlombok:lombok:1.18.30"
-
     testImplementation platform('org.junit:junit-bom:5.9.1')
     testImplementation 'org.junit.jupiter:junit-jupiter'
 }
@@ -83,17 +68,98 @@ dependencies {
 
 #### Maven:
 ```
-<dependency>
-    <groupId>ai.yda</groupId>
-    <artifactId>yda-application</artifactId>
-    <version>1.0.0</version>
-</dependency>
-<dependency>
-    <groupId>ai.yda</groupId>
-    <artifactId>yda-channel-rest-spring-sync</artifactId>
-    <version>1.0.0</version>
-</dependency>
+<properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <yda.framework.version>0.0.1</yda.framework.version>
+        <spring.boot.version>3.3.2</spring.boot.version>
+        <lombok.version>1.18.30</lombok.version>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/milestone</url>
+        </repository>
+        <repository>
+            <id>spring-snapshots</id>
+            <name>Spring Snapshots</name>
+            <url>https://repo.spring.io/snapshot</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>ai.yda</groupId>
+            <artifactId>rag-starter</artifactId>
+            <version>${yda.framework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>ai.yda</groupId>
+            <artifactId>rag-assistant-starter</artifactId>
+            <version>${yda.framework.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>ai.yda</groupId>
+            <artifactId>rest-spring-channel</artifactId>
+            <version>${yda.framework.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>ai.yda</groupId>
+            <artifactId>openai-assistant-generator-starter</artifactId>
+            <version>${yda.framework.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>ai.yda</groupId>
+            <artifactId>website-retriever-starter</artifactId>
+            <version>${yda.framework.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+            <version>${spring.boot.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring.boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 ```
+
+You will also need to configure environment variables for normal operation 
 #### Environment Variables:
 ```
 ai:
@@ -142,6 +208,18 @@ spring:
         options:
           model: ${EMBEDING_MODEL}
 ```
+Lastly, you will need to configure your main class as shown in the following example 
+
+#### Main:
+```
+@SpringBootApplication
+public class Main {
+    public static void main(String[] args) {
+        SpringApplication.run(Main.class, args);
+    }
+}
+```
+
 
 #### Contributing
 For contribution guidelines, see [CONTRIBUTING](link).
