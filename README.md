@@ -27,9 +27,10 @@ To integrate the YDA Framework into your project, add the following dependencies
 ```groovy
 implementation "ai.yda:yda-application:1.0.0"
 implementation "ai.yda:yda-channel-rest-spring-sync:1.0.0"
-
+```
 
 #### Maven:
+```
 <dependency>
     <groupId>ai.yda</groupId>
     <artifactId>yda-application</artifactId>
@@ -40,6 +41,7 @@ implementation "ai.yda:yda-channel-rest-spring-sync:1.0.0"
     <artifactId>yda-channel-rest-spring-sync</artifactId>
     <version>1.0.0</version>
 </dependency>
+```
 
 #### Contributing
 To ensure the correct operation of the YDA Framework, include the following parameters in your application.properties or application.yml file:
