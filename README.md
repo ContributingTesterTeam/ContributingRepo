@@ -44,7 +44,7 @@ implementation "ai.yda:yda-channel-rest-spring-sync:1.0.0"
 ```
 
 #### Contributing
-To ensure the correct operation of the YDA Framework, include the following parameters in your application.properties or application.yml file:
+For contribution guidelines, see [CONTRIBUTING](https://github.com/elastic/elasticsearch/blob/main/CONTRIBUTING.md).
 
 #### License
 
