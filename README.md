@@ -46,6 +46,13 @@ implementation "ai.yda:yda-channel-rest-spring-sync:1.0.0"
 #### Contributing
 For contribution guidelines, see [CONTRIBUTING](link).
 
-#### License
+License
+-------
+```
+                    GNU GENERAL PUBLIC LICENSE
+                       Version 3, 29 June 2007
 
-
+ Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
+ Everyone is permitted to copy and distribute verbatim copies
+ of this license document, but changing it is not allowed.
+```
