@@ -56,3 +56,16 @@ License
  Everyone is permitted to copy and distribute verbatim copies
  of this license document, but changing it is not allowed.
 ```
+
+Requirements
+-------
+YDA Framework operates on Java 17+ and heavily integrates with the Spring Framework. If you plan to utilize the existing tools provided by YDA, you will need to implement it within a Spring-based environment. 
+
+YDA also leverages vector databases like Milvus for efficient data processing and retrieval.
+
+We recommend keeping your Java environment and dependencies up-to-date to ensure optimal performance and security. Given the importance of compatibility and security, staying current with the latest versions of Java and Spring Framework is highly advised.
+
+YDA works seamlessly with your platform's native tools and libraries. However, to fully leverage its capabilities, including the advanced data processing features, ensure that your environment is configured with the required dependencies, particularly those related to Spring and vector databases.
+
+
+
