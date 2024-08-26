@@ -44,7 +44,7 @@ implementation "ai.yda:yda-channel-rest-spring-sync:1.0.0"
 ```
 
 #### Contributing
-For contribution guidelines, see [CONTRIBUTING](https://github.com/elastic/elasticsearch/blob/main/CONTRIBUTING.md).
+For contribution guidelines, see [CONTRIBUTING](link).
 
 #### License
 
