@@ -13,13 +13,13 @@ The YDA Framework helps developers integrate and rapidly launch virtual assistan
 - **Context Utilization**: Assistants use platform data and context to deliver relevant responses.
 
 ## Getting Started
-
 - [Download the repository](https://github.com/love-vector/yda) 
 - build project 
 - publish to mavenLocal
-  ![image](https://github.com/user-attachments/assets/dd4ac652-87a7-462a-93f0-fb973328a443)
-- сreate your project and follow the steps below 
 
+  ![image](https://github.com/user-attachments/assets/dd4ac652-87a7-462a-93f0-fb973328a443)
+
+- create your project and follow the steps below
 ### Example Usage
 
 Before starting with YDA Framework, ensure your project is set up to include the dependencies listed below.
