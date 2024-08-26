@@ -1,11 +1,29 @@
-# YDA
-## yda-application
+# YDA Framework
 
-As developers, we use ['yda-application' repository](https://github.com/love-vector/yda-application) to run and test the YDA framework.
-The 'yda-application' project relies on modules from this repository, so we use `maven-publish` plugin to publish artifacts to Local Maven Repository.
-Also, the Gradle task `publishToMavenLocal` is automatically triggered when task `build` is executed.
+YDA Framework is a tool for quickly deploying assistants on large Java platforms, allowing them to use the platform's context to answer questions, effectively replacing managers.
 
-What does this project do?
-Why is this project useful?
-How do I get started?
-Where can I get more help, if I need it?
+## What does this project do?
+
+The YDA Framework helps developers integrate and rapidly launch virtual assistants on various platforms. The framework simplifies the creation of assistants that can utilize platform data to provide relevant answers to user queries.
+
+## Why is this project useful?
+
+- **Quick Integration**: Minimal effort required to add an assistant to an existing project.
+- **Scalability**: Supports large platforms with high traffic.
+- **Context Utilization**: Assistants use platform data and context to deliver relevant responses.
+
+## Getting Started
+
+### Example Usage
+
+Before starting with YDA Framework, ensure your project is set up to include the dependencies listed below.
+
+### Dependencies
+
+To integrate the YDA Framework into your project, add the following dependencies to your `build.gradle` (Gradle) or `pom.xml` (Maven) file:
+
+#### Gradle:
+
+```groovy
+implementation "ai.yda:yda-application:1.0.0"
+implementation "ai.yda:yda-channel-rest-spring-sync:1.0.0"
