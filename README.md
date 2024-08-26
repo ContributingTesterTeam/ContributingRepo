@@ -14,6 +14,11 @@ The YDA Framework helps developers integrate and rapidly launch virtual assistan
 
 ## Getting Started
 
+ 1.[Download the repository](https://github.com/love-vector/yda) 
+ 2. build project 
+ 3. publish to mavenLocal
+ 4. Create your project and follow the steps below 
+
 ### Example Usage
 
 Before starting with YDA Framework, ensure your project is set up to include the dependencies listed below.
@@ -220,6 +225,12 @@ public class Main {
 }
 ```
 
+Now you can send request to assistant and ask any question
+
+### Request
+```
+http://localhost:8080/${ENDPOINT_RELATIVE_PATH}
+```
 
 #### Contributing
 For contribution guidelines, see [CONTRIBUTING](link).
