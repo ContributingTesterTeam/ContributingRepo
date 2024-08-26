@@ -42,6 +42,54 @@ implementation "ai.yda:yda-channel-rest-spring-sync:1.0.0"
     <version>1.0.0</version>
 </dependency>
 ```
+#### Environment Variables:
+```
+ai:
+  yda:
+    framework:
+      rag:
+        retriever:
+          website:
+            collectionName: websites
+            sitemapUrl: ${SITE_MAP}
+            topK: [SET_YOUR_VALUE]
+            isProcessingEnabled: ${PROCESSING_ENABLE}
+            clearCollectionOnStartup: ${CLEAR_COLLECTION_ON_STARTUP}
+        generator:
+          assistant:
+            openai:
+              assistant-id: ${ASSISTANT_ID}
+      channel:
+        rest:
+          spring:
+            endpoint-relative-path: ${ENDPOINT_RELATIVE_PATH}
+            security-token: ${SECURITY_TOKEN}
+
+spring:
+  ai:
+    vectorstore:
+      milvus:
+        client:
+          host: ${MILVUS_HOST}
+          port: ${MILVUS_PORT}
+          username: ${USERNAME}
+          password: ${PASSWORD}
+        databaseName: ${DATABASE_NAME}
+        collectionName: ${COLLECTION_NAME}
+        embeddingDimension: 1536
+        indexType: IVF_FLAT
+        metricType: COSINE
+        initializeSchema: ${ENABLE_INITIALIZE}
+    openai:
+      api-key: ${OPENAI_API_KEY}
+      chat:
+        options:
+          model: ${MODEL}
+          temperature:${TEMPERATURE}
+      embedding:
+        options:
+          model: ${EMBEDING_MODEL}
+```
 
 #### Contributing
 For contribution guidelines, see [CONTRIBUTING](link).
