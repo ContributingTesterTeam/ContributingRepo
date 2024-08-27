@@ -75,8 +75,32 @@ dependencies {
 }
 ```
 
+### Modules
+
+There are several key modules in the YDA Framework. Here is a quick overview:
+
+#### WebsiteRetriever
+
+The `WebsiteRetriever` module is designed to fetch and process information from websites. This module is responsible for scraping content from specified websites, processing the data, and loading it into a vector database such as Milvus for further use in AI-driven applications. Key features include:
+
+-   **Web Scraping:** Collects data from web pages based on configured site maps and rules.
+-   **Data Processing:** Cleans and preprocesses the scraped data to ensure consistency and quality.
+-   **Vectorization:** Converts processed content into vector representations that can be stored in a vector database for efficient retrieval.
+
+#### FileSystemRetriever
+
+The `FileSystemRetriever` module is intended for processing files stored in local or networked file systems. This module reads various file formats, extracts relevant information, and loads it into the vector database. It is particularly useful for enterprises that need to integrate large volumes of document data into their AI systems. Key features include:
+
+-   **File Parsing:** Supports a variety of file formats (e.g., PDF, DOCX, TXT) and extracts meaningful content.
+-   **Data Normalization:** Standardizes and cleans the extracted data to make it ready for vectorization.
+-   **Vector Storage:** Stores the vectorized file content in the database, making it available for AI applications and search.
+
+
 You will also need to configure environment variables for normal operation 
-#### Environment Variables:
+#### Environment Variables :
+
+
+#### WebsiteRetriever
 ```
 ai:
   yda:
@@ -89,42 +113,46 @@ ai:
             topK: [SET_YOUR_VALUE]
             isProcessingEnabled: ${PROCESSING_ENABLE}
             clearCollectionOnStartup: ${CLEAR_COLLECTION_ON_STARTUP}
-        generator:
-          assistant:
-            openai:
-              assistant-id: ${ASSISTANT_ID}
-      channel:
-        rest:
-          spring:
-            endpoint-relative-path: ${ENDPOINT_RELATIVE_PATH}
-            security-token: ${SECURITY_TOKEN}
-
-spring:
-  ai:
-    vectorstore:
-      milvus:
-        client:
-          host: ${MILVUS_HOST}
-          port: ${MILVUS_PORT}
-          username: ${USERNAME}
-          password: ${PASSWORD}
-        databaseName: ${DATABASE_NAME}
-        collectionName: ${COLLECTION_NAME}
-        embeddingDimension: 1536
-        indexType: IVF_FLAT
-        metricType: COSINE
-        initializeSchema: ${ENABLE_INITIALIZE}
-    openai:
-      api-key: ${OPENAI_API_KEY}
-      chat:
-        options:
-          model: ${MODEL}
-          temperature:${TEMPERATURE}
-      embedding:
-        options:
-          model: ${EMBEDING_MODEL}
 ```
-Lastly, you will need to configure your main class as shown in the following example 
+
+#### FileSystemRetriever
+```
+ai:  
+  yda:  
+    framework:  
+      rag:  
+        retriever:  
+          filesystem:  
+            localDirectoryPath:${FILE_PATH}
+```
+
+#### VectorStore
+```
+spring:  
+  ai:  
+    vectorstore:  
+      milvus:  
+        client:  
+          host: ${MILVUS_HOST}  
+          port: ${MILVUS_PORT}  
+          username: ""  
+  password: ""  
+  databaseName: "default"  
+  collectionName: "documents"  
+  embeddingDimension: 1536  
+  indexType: IVF_FLAT  
+  metricType: COSINE  
+  initializeSchema: ${ENABLE_INITIALIZE}  
+    openai:  
+      api-key: ${OPENAI_API_KEY}  
+      chat:  
+        options:  
+          model: gpt-3.5-turbo  
+          temperature: 0.7  
+  embedding:  
+        options:  
+          model: text-embedding-3-small
+```
 
 #### Main:
 ```
