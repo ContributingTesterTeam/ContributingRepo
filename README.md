@@ -9,7 +9,8 @@ YDA is a software project designed to empower Java enterprises with cutting-edge
 - **Modularity for Custom Solutions**: YDA’s modular architecture is designed with enterprise needs in mind, allowing businesses to easily customize and extend the framework to meet their specific requirements. Modularity is key in enterprise environments, and YDA delivers it effectively.
 
 ## Getting Started
-You don’t need to build from source to use Spring Boot (binaries in repo.spring.io), but if you want to try out the latest and greatest, Spring Boot can be built and published to your local Maven cache using the Gradle wrapper. You also need JDK 17. And JDK 11 if you use only YDA core
+You don’t need to build from source to use YDA (binaries in [repo.YDA](https://github.com/love-vector/yda)), but if you want to try out the latest and greatest, YDA can be built and published to your local Maven cache using the Gradle wrapper. You also need JDK 17. And JDK 11 if you use only YDA core functionality
+
 ### Example Usage
 
 Before starting with YDA Framework, ensure your project is set up to include the dependencies listed below.
