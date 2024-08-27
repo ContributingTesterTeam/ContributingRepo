@@ -8,11 +8,11 @@ YDA is a software project designed to empower Java enterprises with cutting-edge
 - **Data Ownership and Flexibility**: We empower enterprises to truly own their data, offering the flexibility to either deploy data in the cloud or manage it securely within their own infrastructure.
 - **Modularity for Custom Solutions**: YDA’s modular architecture is designed with enterprise needs in mind, allowing businesses to easily customize and extend the framework to meet their specific requirements. Modularity is key in enterprise environments, and YDA delivers it effectively.
 
-== Building from Source
+Building from Source
+-------
 
 You don’t need to build from source to use YDA (binaries in [repo.yda](https://github.com/love-vector/yda)), but if you want to try out the latest and greatest, YDA can be built and published to your local Maven cache using the Gradle wrapper. You also need JDK 17. And JDK 11 if you use only YDA core functionality
 
-[source,shell]
 ```
 $ ./gradlew publishToMavenLocal
 ```
@@ -21,7 +21,6 @@ This will build all of the jars and documentation and publish them to your local
 It won't run any of the tests.
 If you want to build everything, use the `build` task:
 
-[source,shell]
 ```
 $ ./gradlew build
 ```
