@@ -29,7 +29,7 @@
     
     ### Dependencies
     
-    To integrate the YDA Framework into your project, add the following dependencies to your `build.gradle` (Gradle) or `pom.xml` (Maven) file:
+    To integrate the YDA Framework into your project, add the following dependencies to your `build.gradle` (Gradle) file:
     
     #### Gradle:
     
