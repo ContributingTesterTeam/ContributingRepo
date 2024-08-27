@@ -13,18 +13,18 @@ YDA is a software project designed to empower Java enterprises with cutting-edge
 You don’t need to build from source to use YDA (binaries in [repo.yda](https://github.com/love-vector/yda)), but if you want to try out the latest and greatest, YDA can be built and published to your local Maven cache using the Gradle wrapper. You also need JDK 17. And JDK 11 if you use only YDA core functionality
 
 [source,shell]
-----
+```
 $ ./gradlew publishToMavenLocal
-----
+```
 
 This will build all of the jars and documentation and publish them to your local Maven cache.
 It won't run any of the tests.
 If you want to build everything, use the `build` task:
 
 [source,shell]
-----
+```
 $ ./gradlew build
-----
+```
 
 ### Example Usage
 
