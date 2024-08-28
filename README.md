@@ -11,7 +11,7 @@ To access the latest features, YDA can be built from source.
 JDK 11 is required for YDA core functionality, while JDK 17 is necessary for Spring integrations.
 
 ### Building from Source
-___ 
+-------
 To build YDA and publish to a local Maven Repository:  
 
 ```bash 
