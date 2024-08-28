@@ -10,7 +10,7 @@ YDA binaries are available at [repo.yda](https://github.com/love-vector/yda).
 To access the latest features, YDA can be built from source.    
 JDK 11 is required for YDA core functionality, while JDK 17 is necessary for Spring integrations.
 
-### Building from Source
+Building from Source
 -------
 To build YDA and publish to a local Maven Repository:  
 
